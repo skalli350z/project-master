@@ -1,0 +1,15 @@
+skalliBundle\Entity\Advert:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: text
+        author:
+            type: text
+    lifecycleCallbacks: {  }

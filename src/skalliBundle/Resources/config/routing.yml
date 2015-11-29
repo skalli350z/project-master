@@ -1,0 +1,55 @@
+skalli_lista:
+     path:      /hello-world/lista
+     defaults:  { _controller: skalliBundle:Advert:lista }
+
+skalli_philosophie:
+     path:      /hello-world/philosophie
+     defaults:  { _controller: skalliBundle:Advert:philosophie }
+
+skalli_sport:
+     path:      /hello-world/sport
+     defaults:  { _controller: skalliBundle:Advert:sport }
+
+skalli_sante:
+     path:      /hello-world/sante
+     defaults:  { _controller: skalliBundle:Advert:sante }
+
+skalli_aero:
+     path:      /hello-world/aero
+     defaults:  { _controller: skalliBundle:Advert:aero }
+
+skalli_info:
+     path:      /hello-world/info
+     defaults:  { _controller: skalliBundle:Advert:info }
+
+skalli_modeli:
+     path:      /hello-world/modeli
+     defaults:  { _controller: skalliBundle:Advert:modeli }
+
+skalli_auto:
+     path:      /hello-world/auto
+     defaults:  { _controller: skalliBundle:Advert:auto }
+
+skalli_list:
+     path:      /hello-world/list
+     defaults:  { _controller: skalliBundle:Advert:list }
+
+skalli_delete:
+     path:      /hello-world/delete/{id}
+     defaults:  { _controller: skalliBundle:Advert:delete }
+
+skalli_show:
+     path:      /hello-world/show/{id}
+     defaults:  { _controller: skalliBundle:Advert:show }
+
+skalli_edit:
+     path:      /hello-world/{id}/edit
+     defaults:  { _controller: skalliBundle:Advert:edit }
+
+skalli_ajout:
+     path:      /hello-world/ajout
+     defaults:  { _controller: skalliBundle:Advert:ajout }
+
+skalli_about:
+     path:      /hello-world/about
+     defaults:  { _controller: skalliBundle:Advert:about }

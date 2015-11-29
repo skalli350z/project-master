@@ -1,0 +1,44 @@
+{% extends '::bas.html.twig' %}
+{% block body %}
+
+
+<h1 href="{{ path('skalli_show', {'id':  advert.Id  }) }}">
+
+
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-2" style="background-color:Gainsboro;">
+          <br>
+            <span style="font-size: 18px;">Cree le : </span> {{advert.date|date("d/m/Y") }}
+          </br> 
+        <br>
+             <span style="font-size: 18px;">Par : </span>   {{advert.author}}
+        </br>
+      </div>
+      <div class="col-sm-6" style="background-color:lavender;">
+       <br> {{advert.coment}} </br>
+     </div>
+      <div class="col-sm-4" style="background-color:Gainsboro;">
+      <center>
+      <p>  <img src="{{asset('uploads/' ~ advert.Id ~ '.jpeg') }}" alt=""  width="410" height="220" /> </p>
+     <center>
+      </div>
+  </div>
+</div>
+<header id="header">
+            </header>
+
+
+</h1>
+
+ <a href="{{ path('skalli_list') }}">
+
+              <INPUT TYPE="SUBMIT" VALUE=" retour ">
+
+            </a>   </h3>
+
+
+{% endblock %}
+
+

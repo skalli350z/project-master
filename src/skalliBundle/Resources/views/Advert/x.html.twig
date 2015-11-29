@@ -1,0 +1,23 @@
+{% extends '::bas.html.twig' %}
+{% block body %}
+
+
+<div class="container">
+  <h2  style="color:blue;">
+
+<span style="font-size:30px;">Thèmes</span>
+
+<br></br>
+</h2>
+  <div class="list-group">
+   <h1><a href="{{ path('skalli_auto')}}" class="list-group-item list-group-item-info ">Automobile</a></h1>
+   <h1><a href="{{ path('skalli_sport') }}" class="list-group-item list-group-item-info">Sport</a></h1>
+   <h1><a href="{{ path('skalli_philosophie') }}" class="list-group-item list-group-item-info">Philosophie</a></h1>
+   <h1> <a href="{{ path('skalli_modeli')}}" class="list-group-item list-group-item-info">Modelisme</a> </h1>
+   <h1> <a href="{{ path('skalli_info') }}" class="list-group-item list-group-item-info ">Informatique</a> </h1>
+   <h1> <a href="{{ path('skalli_sante') }}" class="list-group-item list-group-item-info">Santé</a> </h1>
+   <h1>  <a href="{{ path('skalli_aero') }}" class="list-group-item list-group-item-info">Aeronautique</a> </h1>
+ </div>
+</div>
+
+{% endblock %}

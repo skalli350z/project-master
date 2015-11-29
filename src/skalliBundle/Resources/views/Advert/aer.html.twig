@@ -1,0 +1,65 @@
+{% extends '::bas.html.twig' %}
+{% block body %}
+
+<div class="container">
+
+    <h2  style="color:blue;">
+
+<span style="font-size:30px;">Aeronautique</span> </h2>
+  <div class="list-group">
+
+
+
+
+ <h1><a href="{{ path('skalli_auto')}}" class="list-group-item list-group-item-info ">Automobile</a></h1>
+   <h1><a href="{{ path('skalli_sport') }}" class="list-group-item list-group-item-info ">Sport</a></h1>
+   <h1><a href="{{ path('skalli_philosophie') }}" class="list-group-item list-group-item-info ">Philosophie</a></h1>
+   <h1> <a href="{{ path('skalli_modeli')}}" class="list-group-item list-group-item-info ">Modelisme</a> </h1>
+   <h1> <a href="{{ path('skalli_info') }}" class="list-group-item list-group-item-info ">Informatique</a> </h1>
+   <h1> <a href="{{ path('skalli_sante') }}" class="list-group-item list-group-item-info">Santé</a> </h1>
+   <h1>  <a href="{{ path('skalli_aero') }}" class="list-group-item list-group-item-info active">Aeronautique</a> </h1>
+</div>
+</div>
+
+    
+{% for p in advert %}
+{% if p.Id is defined %}
+ {% if p.title == "aero" %}
+<br>Posté par : {{p.author}} </br>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-2" style="background-color:Gainsboro;">
+          <br>
+        <a href="{{ path('skalli_edit', {'id': p.Id}) }}">
+          <INPUT TYPE="SUBMIT" VALUE=" Editer ">
+        </a>
+          </br>
+          <br>
+              <a href="{{ path('skalli_delete', {'id': p.Id}) }}">
+             <INPUT TYPE="SUBMIT" VALUE=" Supprimer ">
+               </a>
+           </br>
+        <br>
+        <a href="{{ path('skalli_show', {'id': p.Id}) }}">
+          <INPUT TYPE="SUBMIT" VALUE=" Visualiser ">
+        </a>
+        </br>
+      </div>
+      <div class="col-sm-6" style="background-color:lavender;">
+       <br> {{p.coment}} </br>
+     </div>
+      <div class="col-sm-4" style="background-color:Gainsboro;">
+      <center>
+      <p>  <img src="{{asset('uploads/' ~ p.Id ~ '.jpeg') }}" alt=""  width="410" height="220" /> </p>
+     <center>
+      </div>
+  </div>
+</div>
+<header id="header">
+            </header>
+
+{% endif %}
+{% endif %}
+{% endfor %}
+
+{% endblock %}
